@@ -1,0 +1,67 @@
+:root{
+        --width: 100%;
+}
+
+@font-face {
+        font-family: 'SF Pro Display';
+        src: local('SF Pro Display'), 
+                url('./fonts/SF\ Pro\ Display/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+        font-weight: medium;
+}
+
+*{
+        font-family: 'SF Pro Display';
+        
+}
+body, html{
+        overflow-x: hidden;
+}
+
+.list-item{
+        opacity: 1;
+}
+
+a{
+        &:hover{
+                cursor: pointer;
+        }
+}
+
+i{
+        font-style: normal;
+}
+
+div.container{
+        position: relative;
+        &:after{
+                content: '';
+                background-color: white;
+                top: 0;
+                right: 0;
+                width: var(--width);
+                height: 100%;
+                position: absolute;
+        }
+}
+
+img.animoji{
+        animation-name: jiggle;
+        transform: translateY(-40px);
+        transform-origin: bottom;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 5s;
+}
+
+@keyframes jiggle {
+        0%{
+                transform: translateY(-40px);
+        }  
+        50%{
+                transform: translateY(0px);
+        }
+        100%{
+                transform: translateY(-40px);
+        }
+}

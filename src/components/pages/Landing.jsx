@@ -35,7 +35,7 @@ const Landing = React.forwardRef((props, ref)=>{
             y: 0
         })
         .fromTo(q('.word'), {
-            y: 60,
+            y: 70,
         },{
             y:0,
             stagger: 0.1,
@@ -44,17 +44,17 @@ const Landing = React.forwardRef((props, ref)=>{
 
   return (
     <section ref={ref} className='w-full relative h-screen flex justify-center md:block'>
-        <div ref={(el)=>image = el} className='z-0 absolute top-[9rem] w-[275px] sm:w-[25rem] sm:right-0 lg:w-[35rem]'>
+        <div ref={(el)=>image = el} className='z-0 absolute top-[9rem] w-full sm:w-[25rem] sm:right-0 lg:w-[35rem]'>
             <img src={me}  alt='Memoji' className='animoji'/>
         </div>
-        <div className='text-4xl absolute z-10 font-medium bottom-[6rem] text-center sm:text-6xl sm:text-left sm:pl-16 lg:pl-[5rem] lg:text-8xl'>
+        <div className='text-6xl absolute z-10 font-medium bottom-[20%] text-center sm:text-6xl sm:text-left sm:pl-16 lg:pl-[5rem] lg:text-8xl'>
             <div className='overflow-hidden title'>
                 <h2 className='' ref={(el)=>title = el}>
                     Hi! I am Sid.
                 </h2>
             </div>
             <div className='overflow-hidden px-5 sm:px-0 subtitle' ref={subtitle}>
-                <h2  className='text-2xl sm:text-4xl lg:text-5xl'>
+                <h2  className='text-3xl sm:text-4xl lg:text-5xl'>
                     <i className = 'word inline-block'>I&nbsp;</i>
                     <i className = 'word inline-block'>am&nbsp;</i> 
                     <i className = 'word inline-block'>a&nbsp;</i> 
